@@ -1,0 +1,8 @@
+{
+  "name": "4cadia.slackbot",
+  "description": "A slackbot Node.js app using Express 4",
+  "repository": "https://bitbucket.org/biancak_atlas/4cadia.slackbot",
+  "logo": "https://bitbucket.org/biancak_atlas/4cadia.slackbot/master/public/node.svg",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "4cadia.slackbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/biancak_atlas/4cadia.slackbot.git"
+  },
+  "author": "Bianca Kaiser",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/biancak_atlas/4cadia.slackbot#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.5.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "request": "^2.88.0",
+    "tape": "^4.7.0"
+  }
+}
