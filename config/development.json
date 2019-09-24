@@ -1,0 +1,9 @@
+{
+  "slack": {
+    "name": "PlannerBot",
+    "emoji": ":calendar:",
+    "channel": "",
+    "webhook_url": "",
+    "eventColor": "good"   
+  }
+}
