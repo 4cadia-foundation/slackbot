@@ -1,0 +1,29 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:10.15.3
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script: # Modify the commands below to build your repository.
+          - npm install
+          - npm test
+    - step:
+        name: Deploy to develop
+        deployment: develop
+        trigger: manual  # Uncomment to make this a manual deployment.
+        script:
+          - pipe: atlassian/heroku-deploy:1.0.3
+            variables:
+              HEROKU_API_KEY: $HEROKU_API_KEY
+              HEROKU_APP_NAME: $HEROKU_APP_NAME
+              SLACK_VERIFICATION_TOKEN: $SLACK_VERIFICATION_TOKEN
+              SLACK_BOT_TOKEN: $SLACK_BOT_TOKEN
+              SLACK_AUTH_TOKEN: $SLACK_AUTH_TOKEN
+              ZIP_FILE: 'build.tar.gz'
+
