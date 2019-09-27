@@ -15,7 +15,7 @@ pipelines:
           - npm test
     - step:
         name: Deploy to develop
-        deployment: develop
+        deployment: Develop
         trigger: manual  # Uncomment to make this a manual deployment.
         script:
           - pipe: atlassian/heroku-deploy:1.0.3
