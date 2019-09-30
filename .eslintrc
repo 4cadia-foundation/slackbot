@@ -11,6 +11,8 @@
     "indent": [2, 2],
     "import/no-extraneous-dependencies": [2, {
       "devDependencies": true
-    }]
+    }],
+    "no-console": "off",
+    "no-unused-vars": ["warn"]
   }
 }

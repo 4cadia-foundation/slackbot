@@ -5,5 +5,8 @@
     "channel": "",
     "webhook_url": "",
     "eventColor": "good"   
+  },
+  "coinAPI": {
+    "URL": "https://api.coincap.io/v2"
   }
 }

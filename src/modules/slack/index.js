@@ -1,8 +1,7 @@
-import fs from 'fs';
-import config from 'config';
+// import config from 'config';
 import request from 'request';
 
-const slackConfig = config.get('slack');
+// const slackConfig = config.get('slack');
 
 export const postChatMessage = (message) => new Promise((resolve, reject) => {
   const {

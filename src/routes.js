@@ -2,9 +2,9 @@ import express from 'express';
 
 import { log } from './utils';
 import { cryptoList } from './modules/cryptocurrency';
+import { cryptoOptions } from './modules/cryptocurrency/getCryptoCurrency';
 
 const router = new express.Router();
-console.log(cryptoList);
 
 router.post('/slack/command/cryptocurrency', async (req, res) => {
   try {
@@ -45,6 +45,17 @@ router.post('/slack/actions', async (req, res) => {
     return res.json(response);
   } catch (err) {
     log.error(err);
+    return res.status(500).send('Something blew up. We\'re looking into it.');
+  }
+});
+
+router.get('/test', async (req, res) => {
+  try {
+    console.log(req);
+    const response = await cryptoOptions();
+    return res.json(response);
+  } catch (err) {
+    console.log(err);
     return res.status(500).send('Something blew up. We\'re looking into it.');
   }
 });
